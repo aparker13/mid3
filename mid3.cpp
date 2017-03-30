@@ -226,9 +226,9 @@ int uTest(double tolerance)
             153.086627,  76.474839,   18.016858 };
     
 
-	cout << setw(10) << left << fixed;
+    cout << setw(10) << left << fixed;
     cout << "mass";
-	cout << setw(10) << left << fixed;
+    cout << setw(10) << left << fixed;
     cout << "height";
     cout << setw(10) << left << fixed;
     cout << "ponderal";
