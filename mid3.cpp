@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
 	double mass   = 1.0;
 	double height = 1.0;
 	//Get command-line arguments
+    
     #ifdef UTEST
 	if (argc < 2) {
 		cout << "No input was detected.                  \n";
@@ -29,9 +30,11 @@ int main(int argc, char *argv[])
 	}
     double tolerance = atof(argv[1]);
     uTest(tolerance);
+    
     return 0;
     #endif
-	if (argc < 3) {
+	
+    if (argc < 3) {
 		cout << "No input was detected.                  \n";
 		cout << "                                        \n";
 		cout << "Program usage: ./program <mass> <height>\n";
@@ -46,7 +49,8 @@ int main(int argc, char *argv[])
 	cout << setw(10) << left << fixed << setprecision(6);
 	cout << getPonderal(mass, height) << endl;
 	cout << endl;
-	return 0;
+	
+    return 0;
 }
 
 double getPonderal(double mass, double height)
@@ -260,11 +264,12 @@ int uTest(double tolerance)
             error++;
         }
         i = i+3;        
-	    cout << endl;
+        cout << endl;
     }
     cout << endl;
     cout << error << " errors found.\n";
     cout << "end-of-unit-test\n";
-	return 0;
+    
+    return 0;
 }
 #endif
