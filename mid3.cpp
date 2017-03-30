@@ -226,38 +226,38 @@ int uTest(double tolerance)
             153.086627,  76.474839,   18.016858 };
     
 
-	cout << setw(10) << left << fixed << setprecision(6);
+	cout << setw(10) << left << fixed;
     cout << "mass";
-	cout << setw(10) << left << fixed << setprecision(6);
+	cout << setw(10) << left << fixed;
     cout << "height";
-    cout << setw(10) << left << fixed << setprecision(6);
+    cout << setw(10) << left << fixed;
     cout << "ponderal";
-	cout << setw(10) << left << fixed << setprecision(6);
+    cout << setw(10) << left << fixed;
     cout << "returned";
     cout << endl;
-	cout << setw(10) << left << fixed << setprecision(6);
+    cout << setw(10) << left << fixed;
     cout << "--------- ";
-	cout << setw(10) << left << fixed << setprecision(6);
+    cout << setw(10) << left << fixed;
     cout << "--------- ";
-    cout << setw(10) << left << fixed << setprecision(6);
+    cout << setw(10) << left << fixed;
     cout << "--------- ";
-	cout << setw(10) << left << fixed << setprecision(6);
+    cout << setw(10) << left << fixed;
     cout << "---------\n";
     while (i < 480) {
         double returned = getPonderal(table[i], table[i+1]);
 	    //This formatting will help for your unit test output
-	    cout << setw(10) << left << fixed << setprecision(5);
-	    cout << table[i];
-	    cout << setw(10) << left << fixed << setprecision(5);
+        cout << setw(10) << left << fixed << setprecision(5);
+        cout << table[i];
+        cout << setw(10) << left << fixed << setprecision(5);
         cout << table[i+1];
-	    cout << setw(10) << left << fixed << setprecision(5);
+        cout << setw(10) << left << fixed << setprecision(5);
         cout << table[i+2];
-	    cout << setw(10) << left << fixed << setprecision(5);
+        cout << setw(10) << left << fixed << setprecision(5);
         cout << returned;
         if (returned < table[i+2]-tolerance || returned > table[i+2]+tolerance) {
-	    cout << setw(10) << left << fixed << setprecision(6);
-        cout << "<----- outside of tolerance";
-        error++;
+            cout << setw(10) << left << fixed << setprecision(6);
+            cout << "<----- outside of tolerance";
+            error++;
         }
         i = i+3;        
 	    cout << endl;
